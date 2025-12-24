@@ -1,0 +1,9 @@
+<div *ngIf="movie" class="movie-detail">
+    <button (click)="goBack()" class="back-btn">← Назад</button>
+    <img [src]="movie.image" [alt]="movie.title" class="poster" />
+    <h1>{{ movie.title }} ({{ movie.year }})</h1>
+    <p>{{ movie.description }}</p>
+</div>
+<div *ngIf="!movie">
+    Фильм не найден
+</div>
